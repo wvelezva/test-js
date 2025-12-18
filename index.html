@@ -4,11 +4,17 @@
     <meta charset='utf-8'>
   </head>
   <body>
-    hola mundo 8
+    hola mundo 9
 
     <div id="app-ims"></div>
     <script src="https://imsallangraytest1.kanesolutions.com/ims/pub/ui/onlineapp"></script>
     <script>
+      window.addEventListener("message", (event) => {
+        console.log("Message received:", event.data);
+        console.log("Origin:", event.origin);
+        console.log("Source window:", event.source);
+        console.trace("Message stack trace");
+      });
       spec = {
          "baseUrl": "https://imsallangraytest1.kanesolutions.com/ims",
          "abortUrl": "https://imsallangraytest1.kanesolutions.com",
